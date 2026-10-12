@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EXZ DEVELOPMENT creates and sells customised business, ecommerce, food delivery and portfolio websites. Contact us by WhatsApp or phone.">
+  <meta name="theme-color" content="#080b16">
+  <title>EXZ DEVELOPMENT — Websites Built for Business</title>
+  <style>
+    :root{--bg:#080b16;--panel:#101629;--muted:#aab3c8;--text:#f7f9ff;--cyan:#55e6ff;--purple:#9b7bff;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 10% 5%,rgba(67,93,255,.17),transparent 38%),radial-gradient(ellipse at 90% 30%,rgba(0,220,255,.10),transparent 32%);z-index:-1}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,11,22,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.04em}
+    .logo{height:39px;width:39px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#07101b;font-weight:950;box-shadow:0 0 28px #55e6ff35}
+    .brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.22em;margin-top:-4px}
+    nav{display:flex;align-items:center;gap:27px;font-size:14px;color:#d6dcef}
+    nav a:hover{color:var(--cyan)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:12px;padding:12px 18px;font-weight:750;font-size:14px;transition:.2s;cursor:pointer}
+    .btn-primary{color:#07101b;background:linear-gradient(100deg,var(--cyan),#9bf4e6);box-shadow:0 8px 28px #55e6ff22}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px #55e6ff3d}
+    .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.035)}
+    .btn-ghost:hover{border-color:#55e6ff77;background:#55e6ff0c}
+    .menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 11px;border-radius:9px;font-size:20px}
+    .hero{padding:90px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px;min-height:620px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #55e6ff40;background:#55e6ff0b;color:#a9f5ff;border-radius:30px;padding:7px 12px;font-size:12px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+    .dot{width:7px;height:7px;background:#61f7c7;border-radius:50%;box-shadow:0 0 12px #61f7c7}
+    h1{font-size:clamp(42px,5.8vw,70px);line-height:1.04;letter-spacing:-.055em;margin:24px 0 20px}
+    .gradient-text{background:linear-gradient(100deg,#fff 4%,var(--cyan) 50%,#b7a1ff 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:17px;color:var(--muted);max-width:560px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .micro{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;color:#c4cce0;font-size:12px}
+    .micro span:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:7px}
+    .visual{position:relative;min-height:390px;display:grid;place-items:center}
+    .orb{position:absolute;width:310px;height:310px;border-radius:50%;background:linear-gradient(135deg,#4be5ff33,#a27bff28);filter:blur(3px);box-shadow:0 0 100px #655cff22}
+    .browser{position:relative;width:min(100%,410px);border:1px solid #ffffff26;background:linear-gradient(145deg,#151d33ee,#0d1222f5);border-radius:20px;padding:15px;box-shadow:0 30px 90px #0008;transform:rotate(2deg)}
+    .browser-top{display:flex;align-items:center;gap:6px;padding:3px 3px 14px;border-bottom:1px solid var(--line)}
+    .circle{width:7px;height:7px;border-radius:50%;background:#ff6687}.circle:nth-child(2){background:#ffc75e}.circle:nth-child(3){background:#5de5ad}
+    .address{height:17px;background:#ffffff0b;border-radius:5px;flex:1;margin-left:8px}
+    .mock-hero{padding:25px 14px 20px;background:radial-gradient(circle at 85% 10%,#9b7bff3d,transparent 40%),linear-gradient(135deg,#1a2944,#11172a);border-radius:13px;margin-top:13px}
+    .mock-pill{font-size:9px;color:var(--cyan);letter-spacing:.14em}
+    .mock-title{font-size:27px;line-height:1.08;font-weight:850;margin:12px 0}
+    .mock-line{height:6px;width:76%;background:#ffffff24;border-radius:6px;margin:7px 0}
+    .mock-line.short{width:52%}
+    .mock-cta{display:inline-block;background:linear-gradient(90deg,var(--cyan),#a7f5e7);color:#06111b;border-radius:6px;padding:7px 12px;font-size:9px;font-weight:900;margin-top:12px}
+    .mock-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+    .mock-card{height:70px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(145deg,#ffffff0c,#ffffff03);padding:10px}
+    .mock-icon{width:20px;height:20px;border-radius:6px;background:#55e6ff20;border:1px solid #55e6ff55;margin-bottom:9px}
+    .float-tag{position:absolute;border:1px solid #ffffff25;background:#11182beF;border-radius:12px;padding:11px 14px;font-size:12px;box-shadow:0 15px 35px #0006}
+    .float-tag strong{display:block;font-size:13px}.tag-one{top:38px;right:-12px}.tag-two{bottom:35px;left:-18px}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .kicker{font-size:11px;color:var(--cyan);font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+    h2{font-size:clamp(29px,4vw,43px);line-height:1.15;letter-spacing:-.035em;margin:12px 0}
+    .section-head p,.about-copy p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{border:1px solid var(--line);background:linear-gradient(145deg,#141b30bd,#0d1222d9);border-radius:18px;padding:24px;transition:.25s}
+    .service:hover{transform:translateY(-5px);border-color:#55e6ff66;box-shadow:0 20px 45px #0003}
+    .service-icon{height:45px;width:45px;border:1px solid #55e6ff4d;background:linear-gradient(135deg,#55e6ff18,#9b7bff20);display:grid;place-items:center;border-radius:13px;color:var(--cyan);font-size:20px;margin-bottom:19px}
+    .service h3{font-size:18px;margin-bottom:8px}.service p{color:var(--muted);font-size:14px}
+    .service .arrow{display:inline-block;color:var(--cyan);margin-top:17px;font-size:13px;font-weight:800}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+    .about-panel{border:1px solid var(--line);border-radius:22px;padding:30px;background:linear-gradient(145deg,#121b31,#0c1120)}
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .stat{padding:17px;border:1px solid var(--line);border-radius:13px;background:#ffffff05}
+    .stat strong{font-size:23px;display:block;color:var(--cyan)}.stat span{font-size:12px;color:var(--muted)}
+    .about-copy p{margin:14px 0}
+    .checks{list-style:none;margin:20px 0;display:grid;gap:10px;color:#dbe2f2;font-size:14px}
+    .checks li:before{content:"✓";display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#55e6ff17;color:var(--cyan);margin-right:10px;font-weight:900}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .step{padding:23px;border-top:1px solid #55e6ff77;background:linear-gradient(180deg,#55e6ff08,transparent);border-radius:0 0 14px 14px}
+    .step-num{font-size:12px;letter-spacing:.12em;color:var(--cyan);font-weight:900}.step h3{margin:10px 0 7px}.step p{font-size:14px;color:var(--muted)}
+    .contact-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;border:1px solid #55e6ff42;border-radius:23px;padding:35px;background:radial-gradient(ellipse at 100% 0%,#9b7bff20,transparent 50%),linear-gradient(110deg,#121c32,#0d1222)}
+    .contact-box p{color:var(--muted);margin-top:9px;max-width:600px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:10px}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:#8d98b2;font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9;width:55px;height:55px;border-radius:18px;display:grid;place-items:center;background:#20c875;color:#06170f;font-size:22px;font-weight:950;box-shadow:0 10px 30px #20c8753d;border:1px solid #ffffff55}
+    .whatsapp-float:hover{transform:translateY(-3px)}
+    @media(max-width:800px){nav{display:none;position:absolute;left:4%;right:4%;top:69px;padding:18px;background:#101629;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px}.menu{display:block}.nav>.btn{display:none}.hero{grid-template-columns:1fr;padding-top:65px;gap:25px;min-height:auto}.visual{min-height:350px}.tag-one{right:0}.tag-two{left:0}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.contact-box{grid-template-columns:1fr}.process{grid-template-columns:1fr}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-bottom:40px}.visual{min-height:315px}.browser{padding:10px}.mock-title{font-size:23px}.orb{width:240px;height:240px}.float-tag{font-size:11px}.tag-one{top:10px}.tag-two{bottom:10px}.hero p{font-size:15px}.hero-actions .btn{flex:1}.stat-grid{grid-template-columns:1fr 1fr}section{padding:58px 0}.contact-box{padding:24px}.contact-actions .btn{flex:1}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="EXZ DEVELOPMENT home"><span class="logo">EXZ</span><span>EXZ DEVELOPMENT<small>WEBSITES THAT WORK</small></span></a>
+    <nav id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/917384058767?text=Hello%20EXZ%20DEVELOPMENT%2C%20I%20want%20to%20discuss%20a%20website." target="_blank" rel="noopener">Let's Talk ↗</a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Your digital journey starts here</span>
+      <h1>We build websites that help your <span class="gradient-text">business grow.</span></h1>
+      <p>From a professional business website to a complete online store, EXZ DEVELOPMENT helps turn your idea into a useful digital experience.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/917384058767?text=Hello%20EXZ%20DEVELOPMENT%2C%20I%20need%20a%20website." target="_blank" rel="noopener">Discuss Your Project ↗</a>
+        <a class="btn btn-ghost" href="#services">Explore Websites ↓</a>
+      </div>
+      <div class="micro"><span>Custom website options</span><span>Mobile-friendly design</span><span>Direct support</span></div>
+    </div>
+    <div class="visual" aria-label="Illustration of a modern website design">
+      <div class="orb"></div>
+      <div class="browser">
+        <div class="browser-top"><span class="circle"></span><span class="circle"></span><span class="circle"></span><div class="address"></div></div>
+        <div class="mock-hero"><div class="mock-pill">YOUR BRAND · YOUR WEBSITE</div><div class="mock-title">Make your next<br><span class="gradient-text">big move online.</span></div><div class="mock-line"></div><div class="mock-line short"></div><span class="mock-cta">GET STARTED ↗</span></div>
+        <div class="mock-cards"><div class="mock-card"><div class="mock-icon"></div><div class="mock-line"></div></div><div class="mock-card"><div class="mock-icon"></div><div class="mock-line"></div></div><div class="mock-card"><div class="mock-icon"></div><div class="mock-line"></div></div></div>
+      </div>
+      <div class="float-tag tag-one">✦ <strong>Made for your goals</strong><span style="color:var(--muted)">A design that fits your brand</span></div>
+      <div class="float-tag tag-two">↗ <strong>Ready for mobile</strong><span style="color:var(--muted)">Designed for small screens too</span></div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">What we offer</span><h2>The right website for <span class="gradient-text">your next step.</span></h2><p>Choose a website type that fits your business. We can discuss the features and customise the project to your needs.</p></div>
+      <div class="grid">
+        <article class="service"><div class="service-icon">▦</div><h3>Business Websites</h3><p>Present your company, services, contact details and brand professionally online.</p><a class="arrow" href="#contact">Discuss this website ↗</a></article>
+        <article class="service"><div class="service-icon">◇</div><h3>E-commerce Websites</h3><p>Showcase products, organise categories and create a convenient online shopping experience.</p><a class="arrow" href="#contact">Discuss this website ↗</a></article>
+        <article class="service"><div class="service-icon">⌂</div><h3>Food & Restaurant</h3><p>Display menus, prices, offers and ordering or enquiry options for your food business.</p><a class="arrow" href="#contact">Discuss this website ↗</a></article>
+        <article class="service"><div class="service-icon">◎</div><h3>Portfolio Websites</h3><p>Show your work, skills, achievements and projects in one easy-to-share place.</p><a class="arrow" href="#contact">Discuss this website ↗</a></article>
+        <article class="service"><div class="service-icon">⌘</div><h3>Landing Pages</h3><p>Focused pages for a product, service, promotion or campaign with a clear call to action.</p><a class="arrow" href="#contact">Discuss this website ↗</a></article>
+        <article class="service"><div class="service-icon">✳</div><h3>Custom Websites</h3><p>Have a different idea? Tell us what you need and we can discuss a suitable custom solution.</p><a class="arrow" href="#contact">Tell us your idea ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="about-panel">
+        <span class="kicker">EXZ DEVELOPMENT</span>
+        <h2>Digital solutions, built around <span class="gradient-text">your idea.</span></h2>
+        <p style="color:var(--muted)">A clear, helpful process from the first conversation to your website handover.</p>
+        <div class="stat-grid"><div class="stat"><strong>01</strong><span>Understand your goals</span></div><div class="stat"><strong>02</strong><span>Plan the right features</span></div><div class="stat"><strong>03</strong><span>Build around your needs</span></div><div class="stat"><strong>04</strong><span>Review before handover</span></div></div>
+      </div>
+      <div class="about-copy"><span class="kicker">About us</span><h2>We make getting online feel <span class="gradient-text">simpler.</span></h2><p>EXZ DEVELOPMENT is a website development and website sales business based in Berhampore, West Bengal. We help business owners and individuals explore website solutions suited to their goals.</p><p>Whether you are starting a small business, growing an existing brand or launching an online store, we focus on understanding your requirements and discussing a practical website plan.</p><ul class="checks"><li>Website options for different business needs</li><li>Responsive layouts for mobile and desktop</li><li>Project features and pricing discussed before work begins</li><li>Communication through WhatsApp and phone</li></ul><a class="btn btn-ghost" href="#contact">Contact our team ↗</a></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Simple process</span><h2>From idea to website.</h2><p>Start with a conversation. We will discuss your requirements, features and project price before moving ahead.</p></div>
+      <div class="process">
+        <div class="step"><span class="step-num">STEP 01</span><h3>Tell us your idea</h3><p>Share your business type, goals, preferred features and examples you like.</p></div>
+        <div class="step"><span class="step-num">STEP 02</span><h3>Plan your website</h3><p>Discuss the design, pages, features, timeline and price for your requirements.</p></div>
+        <div class="step"><span class="step-num">STEP 03</span><h3>Review & handover</h3><p>Review the agreed work and confirm the delivery and hosting/domain arrangements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div><span class="kicker">Let's get started</span><h2>Have a website idea?</h2><p>Message us on WhatsApp or call directly. Tell us what kind of website you need, and we’ll discuss the next steps.</p><p style="color:#e7edff;font-weight:750;margin-top:14px">WhatsApp / Mobile: +91 73840 58767</p></div>
+        <div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/917384058767?text=Hello%20EXZ%20DEVELOPMENT%2C%20I%20want%20to%20discuss%20a%20website." target="_blank" rel="noopener">WhatsApp Chat ↗</a><a class="btn btn-ghost" href="tel:+917384058767">Call Now ☎</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> EXZ DEVELOPMENT. All rights reserved.</span><span>Website development · Berhampore, West Bengal</span><a href="#home">Back to top ↑</a></div></footer>
+<a class="whatsapp-float" href="https://wa.me/917384058767?text=Hello%20EXZ%20DEVELOPMENT" target="_blank" rel="noopener" aria-label="Chat with EXZ DEVELOPMENT on WhatsApp">W</a>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? '×' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.textContent = '☰';
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
